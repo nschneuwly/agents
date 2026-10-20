@@ -7,7 +7,6 @@ import MapComponent from './Components/MapComponent/MapComponent'
 import ToggleLang from './Components/ToggleLang'
 import useAppStore from './Store/AppStore'
 import esriLogoUrl from '../../static/gnav-dist-esri-suisse-no-tm.svg'
-import stUrl from '../../static/Coat_of_arms_of_canton_of_St._Gallen.svg'
 
 import '@arcgis/map-components/components/arcgis-layer-list'
 import '@esri/calcite-components/components/calcite-shell'

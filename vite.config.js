@@ -36,7 +36,7 @@ export default defineConfig({
 			},
 		},
 	},
-	base: './',
+	base: '/agents/',
 	plugins: [
 		basicSsl(),
 		viteStaticCopy({

@@ -107,6 +107,8 @@ const MapComponent: FC = () => {
 				setViewReady(true)
 			}}
 			id="main-map"
+			
+
 		>
 			<div slot="top-left" style={{ background: 'white', borderRadius: '4px', padding: '8px' }}>
 					<SettingsComponent />
