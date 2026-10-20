@@ -1,0 +1,18 @@
+{
+    "Home": {
+        "name": "Home",
+        "lowerName": "home",
+        "elementName": "home",
+        "componentString": "Pages/Home",
+        "vars": [],
+        "directory": "Pages/Home"
+    },
+    "About": {
+        "name": "About",
+        "lowerName": "about",
+        "elementName": "about",
+        "componentString": "Pages/About",
+        "vars": [],
+        "directory": "Pages/About"
+    }
+}

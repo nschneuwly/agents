@@ -1,0 +1,10 @@
+{
+    "description": "Web app template based on React, Zustand, Maps SDK for js, Biome and Vite",
+    "customer": "Internal",
+    "keywords": [
+        "js",
+        "app",
+        "prod"
+    ],
+    "suggestForArchive": false
+}

@@ -1,0 +1,27 @@
+{
+	"compilerOptions": {
+		/* Language & Environment */
+		"target": "ES2023",
+		"lib": ["DOM", "DOM.Iterable", "ES2023"],
+		"jsx": "react-jsx",
+
+		/* Modules */
+		"module": "ESNext",
+		"moduleResolution": "bundler",
+		"resolveJsonModule": true,
+		"verbatimModuleSyntax": true,
+
+		/* Emit */
+		"noEmit": true,
+
+		/* Type Checking */
+		"strict": true,
+		"noUncheckedIndexedAccess": true,
+		"noFallthroughCasesInSwitch": true,
+		"forceConsistentCasingInFileNames": true,
+
+		/* Interop */
+		"skipLibCheck": true
+	},
+	"include": ["./src/**/*"]
+}

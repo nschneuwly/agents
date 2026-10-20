@@ -1,0 +1,14 @@
+{
+	"portalUrl": "https://www.arcgis.com",
+	"clientId": "orPQy6mEfv3BBXIY",
+	"basemaps": [
+		{
+			"id": "eb805b8b704c4506ac3802a7b350d509",
+			"label": "Luftbild"
+		},
+		{
+			"id": "2cf70fabf173405b87f12470b414da7a",
+			"label": "Topo"
+		}
+	]
+}

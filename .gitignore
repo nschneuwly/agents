@@ -1,0 +1,30 @@
+node_modules
+dist
+coverage/
+.vite/
+
+# Environment variables and local secrets
+.env*
+!.env.example
+!.env.*.example
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.Python
+venv/
+.venv/
+env/
+ENV/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Operating system files
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# backend folder
+backend/

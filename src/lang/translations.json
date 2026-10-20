@@ -1,0 +1,18 @@
+{
+    "about": {
+        "de": "Impressum",
+        "en": "About"
+    },
+    "home": {
+        "de": "Startseite",
+        "en": "Home"
+    },
+    "toggle-lang": {
+        "de": "Sprache ändern",
+        "en": "Change language"
+    },
+    "basemap-switcher": {
+        "de": "Hintergrundkarte",
+        "en": "Basemap"
+    }
+}
