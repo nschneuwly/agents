@@ -26,6 +26,7 @@ import { LangGraphAgent } from './LangGraphAssistant'
 const App: FC = () => {
 	const view = useAppStore(state => state.view)
 
+	// main part of app
 	return (
 		<div className="app">
 			<calcite-shell>
