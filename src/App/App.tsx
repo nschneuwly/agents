@@ -59,6 +59,9 @@ const App: FC = () => {
 								suggestedPrompts={[
 									"Markiere alle Wildtierübergänge auf der Karte",
 									"Markiere das grösste Naturschutzgebiet",
+									"Markiere das flächenmässig grösste Auengebiet auf der Karte",
+									"Montre-moi le plus grand passage pour la faune sur la carte",
+									"Wie viele Naturschutzgebiete gibt es insgesamt auf der Karte?"
 								]}
 								keep-suggested-prompts
 								log-enabled
