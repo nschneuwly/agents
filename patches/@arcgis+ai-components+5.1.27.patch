@@ -1,0 +1,40 @@
+diff --git a/node_modules/@arcgis/ai-components/dist/chunks/dataExplorationGraph.js b/node_modules/@arcgis/ai-components/dist/chunks/dataExplorationGraph.js
+index d1cfc3d..a0737c4 100644
+--- a/node_modules/@arcgis/ai-components/dist/chunks/dataExplorationGraph.js
++++ b/node_modules/@arcgis/ai-components/dist/chunks/dataExplorationGraph.js
+@@ -44,7 +44,7 @@ const W = async (t, e) => (await n({ text: "Exiting Data Exploration agent" }, e
+       dataExplorationMessages: i
+       // Don't overwrite outputMessage if query already set it
+     };
+-  const m = i, g = o.content.toString();
++  const m = i, g = o.text;
+   return await $(o, e), { ...t, dataExplorationMessages: m, outputMessage: g };
+ }, H = async (t, e) => {
+   await n({ text: "Requesting LLM for layer query results" }, e);
+@@ -85,7 +85,7 @@ const W = async (t, e) => (await n({ text: "Exiting Data Exploration agent" }, e
+     messages: t.dataExplorationMessages,
+     inputVariables: g,
+     tools: V
+-  }), h = (y.tool_calls?.length ?? 0) > 0, p = y.content.toString();
++  }), h = (y.tool_calls?.length ?? 0) > 0, p = y.text;
+   return await $(y, e), {
+     ...t,
+     dataExplorationMessages: [...t.dataExplorationMessages, y],
+diff --git a/node_modules/@arcgis/ai-components/dist/chunks/generateLayerDescriptions.js b/node_modules/@arcgis/ai-components/dist/chunks/generateLayerDescriptions.js
+index 4cdbd7b..05ae454 100644
+--- a/node_modules/@arcgis/ai-components/dist/chunks/generateLayerDescriptions.js
++++ b/node_modules/@arcgis/ai-components/dist/chunks/generateLayerDescriptions.js
+@@ -357,7 +357,12 @@ Description: {description}`, Ke = r.object({
+   if (typeof c == "string")
+     return c;
+   const d = c.content;
+-  return typeof d == "string" ? d : JSON.stringify(d);
++  return typeof d === "string"
++    ? d
++    : d
++        .filter(block => block.type === "text")
++        .map(block => block.text)
++        .join("\n");
+ }, O = async (e) => {
+   const { promptText: t, modelTier: s = "default", temperature: n = 0, messages: i, inputVariables: o, schema: a, config: l } = e, c = A(t, i ?? []), m = (await M({ modelTier: s, config: l })).withStructuredOutput(a);
+   return await c.pipe(m).invoke(o ?? {}, l);
