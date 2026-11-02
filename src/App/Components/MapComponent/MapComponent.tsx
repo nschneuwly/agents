@@ -14,7 +14,7 @@ import '@arcgis/map-components/components/arcgis-legend'
 import SettingsComponent from '../SettingsComponent'
 
 const EXTRA_LAYER_ITEM_ID = 'da8d7e7fbf82438c9e701ee66da2a455'
-const AGENT_INCLUDED_EFFECT = 'drop-shadow(0, 0, 8px, yellow)'
+const AGENT_INCLUDED_EFFECT = 'drop-shadow(0, 0, 4px, rgba(255, 0, 0, 1))'
 
 const findFeatureLayer = (map: Map | null | undefined, title: string) => {
 	const layer = map?.allLayers.find(l => l.title === title) as FeatureLayer | undefined
@@ -66,7 +66,7 @@ const MapComponent: FC = () => {
 			if (layer) setLayer(layer)
 		}
 
-		// The data exploration agent sets a grey drop-shadow; replace it with a yellow glow
+		// The data exploration agent sets a grey drop-shadow; replace it with a crisp red highlight
 		const handles = (map?.allLayers.toArray() ?? [])
 			.filter(layer => layer.type === 'feature')
 			.map(layer =>
